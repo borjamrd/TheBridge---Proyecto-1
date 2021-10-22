@@ -1,13 +1,7 @@
 function newName() {
-    let unknown = document.getElementsByName('addName'); //NOMBRE NUEVO
-    
-    let newName = document.createElement('p')
-    newName.id='new-name'
-
+    let name1 = document.getElementsByName('addName'); //NOMBRE NUEVO
     let myElement = document.getElementById('old-name')
-    myElement.appendChild(unknown)
-
-    myElement.innerHTML += unknown 
-    
+    myElement.innerHTML += name1 
+    return name1
 };
-
+console.log(newName())
