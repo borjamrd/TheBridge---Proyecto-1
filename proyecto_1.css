@@ -53,7 +53,7 @@
         
             }
                 /*------Nombre y ADD---------*/
-                input[name="addName"]{
+                input[name="add-name"]{
                     height: 40%;
                     width: 200px;
                     margin: 10px;
@@ -78,16 +78,21 @@
                 }
 
         
-
+/*---------- Parte superior derecha -------------- */
         .people {
             background-color: green;
             color: white;
         }
 
+                    
+            p[id="new-p"]{
+                background-color: blue;
+                width: 150px;
+                height: 40px;
+            }
     
-
+/*---------- Parte inferior-------------- */
     .teams{
         background-color: palevioletred;
         height: 350px;
     }
-

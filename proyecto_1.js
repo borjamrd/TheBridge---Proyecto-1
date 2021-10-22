@@ -1,7 +1,12 @@
+
 function newName() {
-    let name1 = document.getElementsByName('addName'); //NOMBRE NUEVO
-    let myElement = document.getElementById('old-name')
-    myElement.innerHTML += name1 
-    return name1
+    let name1 = document.getElementById('addName').value; //cogemos los nombres nuevos
+    let paragraph = document.createElement('p'); // creamos <p>
+    paragraph.textContent = name1; // le damos a <p> el valor los nombres
+    paragraph.id = "new-p"; // le ponemos un id para identificarlo
+    let oldParagraph = document.getElementById('old-name'); // le decimos de donde parte
+    oldParagraph.appendChild(paragraph) // lo unimos
+    
 };
 console.log(newName())
+
