@@ -82,6 +82,8 @@
         .people {
             background-color: green;
             color: white;
+            display: flex;
+            flex-wrap: wrap;
         }
 
                     
@@ -89,6 +91,9 @@
                 background-color: blue;
                 width: 150px;
                 height: 40px;
+                display: flex;
+                flex-direction: row;
+                margin: 10px;
             }
     
 /*---------- Parte inferior-------------- */
