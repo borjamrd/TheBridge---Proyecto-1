@@ -45,7 +45,7 @@ function createTeams() {
         
         // Numeramos los equipos formados y los formamos
         for (let numb = 0; numb < numberOfTeams; numb++) {
-            console.log(`Team number ${numb + 1}`);
+            console.log(`GRUPO ${numb + 1}`);
             for (let m = numb; m < newTeam.length; m += numberOfTeams) {
                 if (newTeam[m][1] != undefined) {    
                     console.log(newTeam[m][1]);
@@ -55,7 +55,7 @@ function createTeams() {
         }
             
         for (let i = 0; i < numberOfTeams; i++) {
-            let container = document.getElementById("n-team");
+            let container = document.getElementById("teams");
 
             //Creamos div 
             let div = document.createElement("div");
@@ -67,7 +67,7 @@ function createTeams() {
             let titleTeam = document.createElement("h3");
             titleTeam.id = "newTitle";
             titleTeam.classList = "new-title";
-            titleTeam.innerHTML = `Team number ${i + 1}`;
+            titleTeam.innerHTML = `GRUPO ${i + 1}`;
             div.appendChild(titleTeam);
 
             //Creamos p de cada nombre
