@@ -1,117 +1,55 @@
-
-/*---------- Parte superior-------------- */
-.create{
-    background-color: pink;
-    justify-content: center;
-    align-items: center;
-    height: 350px;
-    display: flex;
-    flex-direction: column; 
-    
-    
+body{
+    margin: 0%;
+    padding: 0% 5%;
 }
-
-    .title{
-        background-color: yellow;
-        margin: 10px;
-        height: 20%;
-        width: 100%;
-    }
-        .title > h1{
-            display: flex;
-            align-items: center;
-            justify-content: left;
-            margin-left: 30px;
-        }
-
-    .generator{
-        background-color: yellow;
-        display: flex;
-        margin: 10px;
-        height: 70%;
-        width: 100%;
-    }
-
-        .section-generator{
-            background-color: green;
-            width: 50%;
-            margin: 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-            .row{
-                background-color: turquoise;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 60%;
-                height: 40%;
-                margin: 10px;
-        
-            }
-                /*------Nombre y ADD button-------*/
-                input[name="add-name"]{
-                    height: 40%;
-                    width: 200px;
-                    margin: 10px;
-                   
-                }
-
-                button[type="button"]{
-                    height: 45%;
-                    width: 150px;
-                    margin: 10px;
-                }
-                /*---Team size y Generate submit---*/
-                input[name="teamSize"]{
-                        height: 40%;
-                        width: 200px;
-                        margin: 10px;
-                    }
-
-                input[type="submit"]{
-                    height: 45%;
-                    width: 150px;
-                    margin: 10px;
-                }
-
-        
-/*---------- Parte superior derecha -------------- */
-        .people {
-            background-color: green;
-            color: white;
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-                    
-            p[id="new-p"]{
-                background-color: blue;
-                width: 150px;
-                height: 40px;
-                display: flex;
-                flex-direction: row;
-                margin: 10px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            div[id="new-div"]{
-                background-color: orangered;
-                width: 150px;
-                height: 40px;
-                display: flex;
-                flex-direction: row;
-                margin: 10px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-/*---------- Parte inferior-------------- */
-    .teams{
-        background-color: palevioletred;
-        height: 350px;
-    }
+.title{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 40px;
+    padding: 2%;
+    background-color: antiquewhite;
+}
+.generator{
+    display: flex;
+    flex-direction: row;
+    background-color: antiquewhite;
+    padding: 2%;
+    margin: 2% 0%;
+    width: 100%;
+    height: 300px;
+}
+.teams{
+    display: flex;
+    flex-direction: row;
+    background-color: antiquewhite;
+    padding: 2%;
+    width: 100%;
+    height: 300px; 
+}
+.section-generator{
+    display: flex;
+    flex-direction: column;
+    background-color:aquamarine;
+    width: 50%;
+    padding: 5%;
+    margin: 2%;
+}
+.row-create{
+    display: flex;
+    flex-direction: row;
+    background-color: cadetblue;
+    width: 100%;
+    padding: 2%;
+    margin: 2%;
+}
+.n-team{
+    display: flex;
+    flex-direction: column;
+    background-color: cyan;
+    width: 200px;
+    height: 100px;
+    align-items: flex-start;
+    padding: 5%;
+    margin: 2%;
+}

@@ -1,45 +1,42 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>GENERADOR</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='./proyecto_1.css'>
-    <script src='./proyecto_1.js'></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='proyecto_1.css'>
+    <script src='proyecto_1.js'></script>
 </head>
-
 <body>
-
-    <div class="create" name="create">
-        <div class="title">
-            <h1>TEAM GENERATOR</h1>
-        </div>
-        <div class="generator" name="generator">
-            <div class="section-generator">
-                <div class="row">
-                    <input type="text" name="add-name" id="addName" placeholder="Name">
-                    <button type="button" name="add" onclick="newName()">ADD</button>
-                </div>
-                <div class="row">
-                    <input type="number" name="teamSize" step="1" min="1" max="3" placeholder="2">
-                    <input type="submit" value="GENERATE" onclick="generateTeams()"/>
-                </div>
-            </div>
-            <div class="section-generator">
-                <div class="people" id="old-name" >
-                    <p name="old"></p>
-                </div>
-            </div>
-        </div>
+    <div class="title">
+        <h1>Generador de equipos</h1>
     </div>
+    <div class="generator">
+        <div class=section-generator>
+            <div class="row-create">
+                <label>Introduce un nombre</label>
+                <input type="text" id="name" placeholder="nombre">
+                <input type="button" value="ADD" onclick="addName()">
+                <input type="button" value="DELETE" onclick="deleteName()">
+            </div>
+            <div class="row-create">
+                <label>¿Cuántos equipos quieres?</label>
+                <input type="number" id="teamSize">
+                <input type="button" value="GENERATE" onclick="generate()">
+                <input type="button" value="RESET" onclick="reset()">
+            </div>
+        </div>
+        <div class=section-generator>
+            <textarea id="people" rows="16" cols="5">
+            </textarea>
+        </div>
+    </div> 
     <div class="teams">
-        <div class="oldDiv" id="old-div">
-            <p>test</p>
+        <div class="n-team">
+            <h3></h3>
+            <p></p>
         </div>
     </div>
-
 </body>
-
 </html>
