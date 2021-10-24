@@ -55,22 +55,20 @@ function createTeams() {
         }
             
         for (let i = 0; i < numberOfTeams; i++) {
-            let container = document.getElementById("teams");
+            let container = document.getElementById("n-team");
 
             //Creamos div 
             let div = document.createElement("div");
             div.id = "newDiv";
             div.classList = "new-div";
-            let boxDiv = document.getElementById("n-team");
-            container.appendChild(boxDiv);
+            container.appendChild(div);
 
             //Creamos h3 (titulos de los equipos)
             let titleTeam = document.createElement("h3");
             titleTeam.id = "newTitle";
             titleTeam.classList = "new-title";
             titleTeam.innerHTML = `Team number ${i + 1}`;
-            let boxTitle = document.getElementById("h3-team");
-            boxTitle.appendChild(titleTeam);
+            div.appendChild(titleTeam);
 
             //Creamos p de cada nombre
             for (let j = i; j < newTeam.length; j += numberOfTeams) {
@@ -79,7 +77,7 @@ function createTeams() {
                     individual.id = "newIndividual"
                     individual.classList = "new-individual"
                     individual.innerHTML = newTeam[j][1];
-                    boxTitle.appendChild(individual);
+                    titleTeam.appendChild(individual);
                 }
             }
         }
