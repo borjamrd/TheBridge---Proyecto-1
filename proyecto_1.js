@@ -64,7 +64,7 @@ function createTeams() {
                     let individual = document.createElement("p");
                     individual.id = "newIndividual"
                     individual.classList = "new-individual"
-                    individual.innerHTML = newTeam[j][1]; //si no ponemos el uno nos dice la posicion o el numero random
+                    individual.innerHTML = newTeam[j][1]; //si no ponemos el 1 nos dice el valor
                     div.appendChild(individual);
                
             }
@@ -74,7 +74,13 @@ function createTeams() {
 console.log(createTeams())
 /*------ Función reset ------*/
 function reset() {
-
+    let container = document.getElementById("teams");
+    //console.log(container)
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
+    newTeam = [];
+    //console.log(newTeam)
 }
 
 
