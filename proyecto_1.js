@@ -77,7 +77,7 @@ function createTeams() {
                     individual.id = "newIndividual"
                     individual.classList = "new-individual"
                     individual.innerHTML = newTeam[j][1];
-                    titleTeam.appendChild(individual);
+                    div.appendChild(individual);
                 }
             }
         }
