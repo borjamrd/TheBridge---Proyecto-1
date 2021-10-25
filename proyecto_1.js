@@ -34,25 +34,14 @@ function createTeams() {
     } else {
         while (names.length > 0) {
             for (let i = 0; i < names.length; i++) {
-                let random = Math.floor(Math.random()*(names.length-1)); // conseguimos un nombre aleatorio                
-                let selection = names[random]; // lo selecciona
-                newTeam.push([i,selection]) // lo mete como indice
+                let random = Math.floor(Math.random()*(names.length-1)); // formula aleatoria             
+                let selection = names[random]; // lo selecciona un nombre del array names [posicion random]
+                newTeam.push([i,selection]) // vamos a meter la posicion i y el nombre random 
                 //console.log(newTeam);
-                names.splice(random, 1); // borra el que ha escogido
+                names.splice(random, 1); // borra el que hemos metido
             }
         }
-        console.log(newTeam)
-        
-        // Numeramos los equipos formados y los formamos
-        for (let numb = 0; numb < numberOfTeams; numb++) {
-            console.log(`GRUPO ${numb + 1}`);
-            for (let m = numb; m < newTeam.length; m += numberOfTeams) {
-                if (newTeam[m][1] != undefined) {    
-                    console.log(newTeam[m][1]);
-                    break;
-                }
-            }
-        }
+        //console.log(newTeam) comprobamos que se meten en el array  
             
         for (let i = 0; i < numberOfTeams; i++) {
             let container = document.getElementById("teams");
@@ -72,13 +61,12 @@ function createTeams() {
 
             //Creamos p de cada nombre
             for (let j = i; j < newTeam.length; j += numberOfTeams) {
-                if (newTeam[j][1] != undefined) {
                     let individual = document.createElement("p");
                     individual.id = "newIndividual"
                     individual.classList = "new-individual"
-                    individual.innerHTML = newTeam[j][1];
+                    individual.innerHTML = newTeam[j][1]; //si no ponemos el uno nos dice la posicion o el numero random
                     div.appendChild(individual);
-                }
+               
             }
         }
     }
