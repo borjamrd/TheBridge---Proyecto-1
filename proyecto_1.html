@@ -5,15 +5,39 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>GENERADOR</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='normalize.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='proyecto_1.css'>
     <script src='proyecto_1.js'></script>
 </head>
 <body>
-    <div>
-        <h1>Generador de equipos</h1>
+    <div class="title">
+        <h1>Generador de equipos aleatorio</h1>
     </div>
-    <div class="generador">
-
+    <div class="generator">
+        <div class="section-generator">
+            <div class="row-create">
+                <label class="legend">Introduce un nombre</label>
+                <input type="text" id="name" placeholder="nombre">
+                <input class="buttons" type="button" value="ADD" onclick="addName()">
+                <input class="buttons" type="button" value="DELETE" onclick="deleteName()">
+            </div>
+            <div class="row-create">
+                <label class="legend">¿Cuántos equipos quieres?</label>
+                <input type="number" id="teamSize">
+                <input class="buttons" type="button" value="GENERATE" onclick="generate()">
+                <input class="buttons" type="button" value="RESET" onclick="reset()">
+            </div>
+        </div>
+        <div class="section-generator">
+            <textarea id="people">
+            </textarea>
+        </div>
+    </div> 
+    <div class="teams">
+<!--         <div class="n-team">
+            <h3></h3>
+            <p></p>
+        </div> -->
     </div>
 </body>
 </html>
