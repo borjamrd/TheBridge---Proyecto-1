@@ -12,7 +12,8 @@ function addName() {
         names.push(name);
         let textarea = document.getElementById("people");
         textarea.value = names.join("\n");
-        //console.log(names);
+        console.log(names);
+        document.getElementById("name").value = "";
     }
 }
 

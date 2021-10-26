@@ -1,55 +1,97 @@
-body{
-    margin: 0%;
-    padding: 0% 5%;
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
 }
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body{
+    background-color: aquamarine;
+} 
 .title{
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 40px;
-    padding: 2%;
+    flex-direction: row; 
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 5rem;
+    /* padding: 0.3rem; */
     background-color: antiquewhite;
+    margin: auto;
+    margin-top: 1rem;
+}
+h1 {
+    /* font-size: 4rem; */
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
 }
 .generator{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
     background-color: antiquewhite;
     padding: 2%;
-    margin: 2% 0%;
-    width: 100%;
-    height: 300px;
+    margin: 2rem auto;
+    width: 90%;
+    min-height: 30rem;
+    height: fit-content;
 }
 .teams{
-    display: flex;
-    flex-direction: row;
+    /* display: flex;
+    flex-direction: row; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     background-color: antiquewhite;
     padding: 2%;
-    width: 100%;
-    height: 300px; 
+    width: 90%; 
+    height: 30rem; 
+    margin: auto;
 }
 .section-generator{
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    row-gap: 2%;
     background-color:aquamarine;
-    width: 50%;
-    padding: 5%;
+  /*  width: 50%; */
+    padding: 2%;
     margin: 2%;
 }
 .row-create{
-    display: flex;
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: 2fr 4fr 1fr 1fr;
     flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
     background-color: cadetblue;
     width: 100%;
     padding: 2%;
-    margin: 2%;
+    margin: 2%; 
 }
 .n-team{
     display: flex;
     flex-direction: column;
     background-color: cyan;
-    width: 200px;
-    height: 100px;
+    width: 20rem;
+    height: 10rem;
     align-items: flex-start;
     padding: 5%;
     margin: 2%;
+}
+.buttons {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+.legend, #name, #teamSize{
+    font-size: 1.4rem;
+
+}
+#people {
+    font-size: 1.6rem;
+    min-height: 80%;
+    min-width: 80%;
+    max-width: max-content;
+    height: max-content;
+    overflow: scroll;
 }
