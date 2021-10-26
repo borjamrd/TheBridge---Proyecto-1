@@ -3,12 +3,11 @@ let names = [];
 
 /*------ Funcion addName ------*/
 
-function addName() {
+function addName(event) {
     let name = document.getElementById("name").value;
-
     if (name == "") {
         alert("Chato, te falta el nombre");
-    } else {
+    } else if ((event.type == "click") || (event.keyCode === 13)) {
         names.push(name);
         let textarea = document.getElementById("people");
         textarea.value = names.join("\n");

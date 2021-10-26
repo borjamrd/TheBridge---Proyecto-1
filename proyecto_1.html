@@ -17,14 +17,14 @@
         <div class="section-generator">
             <div class="row-create">
                 <label class="legend">Introduce un nombre</label>
-                <input type="text" id="name" placeholder="nombre">
-                <input class="buttons" type="button" value="ADD" onclick="addName()">
+                <input type="text" id="name" placeholder="nombre" onkeyup="addName(event)">
+                <input class="buttons" type="button" value="ADD" onclick="addName(event)">
                 <input class="buttons" type="button" value="DELETE" onclick="deleteName()">
             </div>
             <div class="row-create">
                 <label class="legend">¿Cuántos equipos quieres?</label>
                 <input type="number" id="teamSize">
-                <input class="buttons" type="button" value="GENERATE" onclick="generate()">
+                <input class="buttons" type="button" value="GENERATE" onclick="createTeams()">
                 <input class="buttons" type="button" value="RESET" onclick="reset()">
             </div>
         </div>
@@ -33,7 +33,7 @@
             </textarea>
         </div>
     </div> 
-    <div class="teams">
+    <div class="teams" id="teams">
 <!--         <div class="n-team">
             <h3></h3>
             <p></p>
