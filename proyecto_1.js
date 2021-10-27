@@ -14,16 +14,24 @@ function addName() {
         textarea.value = names.join("\n");
         console.log(names);
         document.getElementById("name").value = "";
+        document.getElementById("name").focus();
     }
 }
 
-/*------ Función delete ------*/
-function deleteName() {
+/*------ Función delete all ------*/
+function deleteAll() {
     names = [];
     let textarea = document.getElementById("people");
     let name = document.getElementById("name");
     textarea.value = "";
     name.value = "";
+}
+
+/*-------Fucntion delete-------*/
+function deleteMember() {
+    names.pop();
+    let textarea = document.getElementById("people");
+    textarea.value = names.join("\n");
 }
 /*------ Función generate ------*/
 let newTeam = [];
