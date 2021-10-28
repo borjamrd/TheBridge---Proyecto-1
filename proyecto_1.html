@@ -20,7 +20,7 @@
                 <input type="text" id="name" placeholder="nombre">
                 <input class="buttons" type="button" value="ADD" onclick="addName()">
                 <input class="buttons" type="button" value="DELETE" onclick="deleteMember()">
-                <input class="buttons" type="button" value="DELETE ALL" onclick="deleteAll()">
+                <input class="buttons" type="button" value="DELETE ALL" onclick="deleteName()">
             </div>
             <div class="row-show">
                 <label class="legend">¿Cuántos equipos quieres generar?</label>
@@ -30,15 +30,12 @@
             </div>
         </div>
         <div class="section-generator">
-            <textarea id="people" disabled>
+            <textarea id="people">
             </textarea>
         </div>
     </div> 
-    <div class="teams" id="teams">
-<!--         <div class="n-team">
-            <h3></h3>
-            <p></p>
-        </div> -->
+    <div id="teams">
+
     </div>
 </body>
 </html>
