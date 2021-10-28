@@ -40,7 +40,7 @@ h3 {
     font-weight: bold;
     font-size: 20px;
 }
-#name, #teamSize {
+#name, #teamSize, #counter {
     padding: 2%;
     height: 50px;
     margin: 0% 5%;
