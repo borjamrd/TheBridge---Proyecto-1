@@ -8,18 +8,22 @@
     <link rel='stylesheet' type='text/css' media='screen' href='normalize.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='proyecto_1.css'>
     <script src='proyecto_1.js'></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Zen+Kaku+Gothic+New&display=swap');
+    </style>
 </head>
 <body>
     <div class="title">
-        <h1>Generador de equipos aleatorio</h1>
+        <h1>Generador de equipos<a id="aleatory"><br>aleatorios</a></h1>
+        
     </div>
     <div class="generator">
         <div class="section-generator">
             <div class="row-create">
-                <label class="legend">Introduce un nombre</label>
-                <input type="text" id="name" placeholder="nombre" onkeyup="addName(event)">
-                <input class="buttons" type="button" value="ADD" onclick="addName(event)">
-                <input class="buttons" type="button" value="DELETE" onclick="deleteName()">
+                    <label class="legend">Introduce un nombre</label>
+                    <input type="text" id="name" placeholder="nombre" onkeyup="addName(event)">
+                    <input class="buttons" type="button" value="ADD" onclick="addName(event)">
+                    <input class="buttons" type="button" value="DELETE" onclick="deleteName()">   
             </div>
             <div class="row-create">
                 <label class="legend">¿Cuántos equipos quieres?</label>

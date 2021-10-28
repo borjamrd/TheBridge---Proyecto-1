@@ -7,12 +7,14 @@ function addName(event) {
     let name = document.getElementById("name").value;
     if (name == "") {
         alert("Chato, te falta el nombre");
+        document.getElementById("name").focus();
     } else if ((event.type == "click") || (event.keyCode === 13)) {
         names.push(name);
         let textarea = document.getElementById("people");
         textarea.value = names.join("\n");
         console.log(names);
         document.getElementById("name").value = "";
+        document.getElementById("name").focus();
     }
 }
 
@@ -82,6 +84,3 @@ function reset() {
     newTeam = [];
     //console.log(newTeam)
 }
-
-
-

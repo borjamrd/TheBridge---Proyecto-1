@@ -1,90 +1,131 @@
 html {
     box-sizing: border-box;
-    font-size: 62.5%;
+    font-size: 62%;
 }
 *, *:before, *:after {
     box-sizing: inherit;
 }
 body{
-    background-color: aquamarine;
-} 
+   /*  background: linear-gradient(127deg,#BB6191, #8D8CC8); */
+    background: url(https://images.unsplash.com/photo-1544306094-e2dcf9479da3) no-repeat;
+    background-size: cover;
+}
 .title{
     display: flex;
-    flex-direction: row; 
-    justify-content: center;
-    align-items: center;
+    flex-direction: column; 
+    justify-content: left;
+    align-items: top;
     width: 90%;
-    height: 5rem;
+    height: 20rem;
     /* padding: 0.3rem; */
-    background-color: antiquewhite;
     margin: auto;
-    margin-top: 1rem;
+}
+#aleatory{
+    color: #FFFFFF;
+    text-shadow: -5px 5px 0px #00e6e6, -10px 10px 0px #01cccc, -15px 15px 0px #00bdbd;
+    color: #FFFFFF;
 }
 h1 {
     /* font-size: 4rem; */
-    text-transform: uppercase;
+    font-family: 'Zen Kaku Gothic New', sans-serif;
     letter-spacing: 0.5rem;
+    font-size: 5rem;;
+    color: #fff;
+}
+h3 {
+    font-family: 'Lato', sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+#name, #teamSize {
+    padding: 2%;
+    height: 50px;
+    margin: 0% 5%;
+    border-radius: 6px;
+    border: 0px;
+    width: 60%;
 }
 .generator{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
-    background-color: antiquewhite;
-    padding: 2%;
+    grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
     margin: 2rem auto;
     width: 90%;
     min-height: 30rem;
     height: fit-content;
+
 }
 .teams{
     /* display: flex;
     flex-direction: row; */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    background-color: antiquewhite;
     padding: 2%;
     width: 90%; 
-    height: 30rem; 
     margin: auto;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+    border-radius: 6px;
+    background-color: rgba(95, 158, 160, 0.5);
+    backdrop-filter: blur(5px);
+    min-height: 300px;
+    margin-bottom: 5%;
+    height: fit-content;
+}
+#people{
+    border-radius: 6px;
+    padding: 5%;
+    overflow: hidden;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+    background-color: rgba(95, 158, 160, 0.5);
+    backdrop-filter: blur(5px);
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5rem;
 }
 .section-generator{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    row-gap: 2%;
-    background-color:aquamarine;
+    margin-bottom: 10%;
   /*  width: 50%; */
-    padding: 2%;
-    margin: 2%;
 }
 .row-create{
     /* display: flex; */
     display: grid;
-    grid-template-columns: 2fr 4fr 1fr 1fr;
-    flex-direction: row;
+    grid-template-columns: 2fr 2fr 1.5fr 1.5fr;
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    background-color: cadetblue;
+    height: 100px;
     width: 100%;
     padding: 2%;
-    margin: 2%; 
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+    border-radius: 6px;
+    background-color: rgba(95, 158, 160, 0.5);
+    backdrop-filter: blur(5px);
+    
 }
-.n-team{
-    display: flex;
-    flex-direction: column;
-    background-color: cyan;
-    width: 20rem;
-    height: 10rem;
-    align-items: flex-start;
-    padding: 5%;
-    margin: 2%;
-}
+
 .buttons {
-    font-size: 1.2rem;
-    text-transform: uppercase;
-}
-.legend, #name, #teamSize{
     font-size: 1.4rem;
+    height: 5rem;
+    text-transform: uppercase;
+    padding: 5%;
+    margin: 0% 5%;
+    border-radius: 6px;
+    border: 0px;
+    color: #fff;
+    background: linear-gradient(127deg, #60B7FF, #8D8CC8);
+    transition-duration: 0.4s;
+}
+.buttons :hover{
+    background-color: #8D8CC8;
+}
+
+p,.legend, #name, #teamSize, .buttons{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5rem;
+    color: black;
 
 }
 #people {
@@ -93,5 +134,23 @@ h1 {
     min-width: 80%;
     max-width: max-content;
     height: max-content;
-    overflow: scroll;
+    overflow-y: auto;
+    border: 0;
+}
+.new-div {
+    display: flex;
+    flex-direction: column;
+    opacity: 60%;
+    width: 20rem;
+    height: 90%;
+    align-items: flex-start;
+    padding: 5%;
+    margin: 2%;
+   
+}
+#titleTeam{
+    color:white;
+    font-size: 20px;
+    font-weight: bold;
+
 }
