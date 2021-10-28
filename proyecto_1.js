@@ -4,6 +4,7 @@ let names = [];
 /*------ Funcion addName ------*/
 
 function addName(event) {
+    
     let name = document.getElementById("name").value;
     if (name == "") {
         alert("Chato, te falta el nombre");
@@ -30,15 +31,15 @@ function deleteName() {
 let newTeam = [];
 function createTeams() {
     let numberOfTeams = parseInt(document.getElementById("teamSize").value); // cogemos el valor de los equipos
-    
-    if (numberOfTeams < 2 || numberOfTeams > names.length) {
-        alert(`Introduce un valor entre 2 y ...`); //falta el contador
+    let count = names.length
+    if (numberOfTeams < 2 || numberOfTeams > (count/2)) {
+        alert("Introduce un valor entre 2 y "+ parseInt(count/2)); //falta el contador
     } else {
         while (names.length > 0) {
             for (let i = 0; i < names.length; i++) {
                 let random = Math.floor(Math.random()*(names.length-1)); // formula aleatoria             
                 let selection = names[random]; // lo selecciona un nombre del array names [posicion random]
-                newTeam.push([i,selection]) // vamos a meter la posicion i y el nombre random 
+                newTeam.push([selection]) // vamos a meter la posicion i y el nombre random 
                 //console.log(newTeam);
                 names.splice(random, 1); // borra el que hemos metido
             }
@@ -66,7 +67,7 @@ function createTeams() {
                     let individual = document.createElement("p");
                     individual.id = "newIndividual"
                     individual.classList = "new-individual"
-                    individual.innerHTML = newTeam[j][1]; //si no ponemos el 1 nos dice el valor
+                    individual.innerHTML = newTeam[j]; //si no ponemos el 1 nos dice el valor
                     div.appendChild(individual);
                
             }
@@ -81,6 +82,7 @@ function reset() {
     while (container.firstChild) {
         container.removeChild(container.firstChild);
     }
+    names = newTeam;
     newTeam = [];
     //console.log(newTeam)
 }
