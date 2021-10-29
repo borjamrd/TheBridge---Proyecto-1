@@ -7,14 +7,17 @@ html {
 }
 body{
    /*  background: linear-gradient(127deg,#BB6191, #8D8CC8); */
-    background: url(https://images.unsplash.com/photo-1544306094-e2dcf9479da3) no-repeat;
+  /*   background: url(https://images.unsplash.com/photo-1544306094-e2dcf9479da3) no-repeat;
     background-size: cover;
+     */
+     background: rgb(34,193,195);
+background: linear-gradient(120deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
 }
 .title{
     display: flex;
     flex-direction: column; 
     justify-content: left;
-    align-items: top;
+    align-items: center;
     width: 90%;
     min-height: 300px;
     height: fit-content;
@@ -48,9 +51,14 @@ h3 {
     border: 0px;
     width: 60%;
 }
+#counter {
+    background-color: white;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
 .generator{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
     column-gap: 5%;
     margin: 2rem auto;
     width: 90%;
@@ -101,7 +109,7 @@ h3 {
     margin-bottom: 10%;
   /*  width: 50%; */
 }
-.row-create{
+.row-create, .row-create_small{
     /* display: flex; */
     display: grid;
     grid-template-columns: 2fr 2fr 1.5fr 1.5fr;
@@ -116,6 +124,9 @@ h3 {
     background-color: rgba(95, 158, 160, 0.5);
     backdrop-filter: blur(5px);
     
+}
+.row-create_small {
+    grid-template-columns: 2fr 2fr 3fr;
 }
 
 .buttons {
@@ -160,4 +171,11 @@ p,.legend, #name, #teamSize{
     font-size: 20px;
     font-weight: bold;
 
+}
+#alert {
+    position: absolute;
+    font-size: 3rem;
+    font-weight: bolder;
+    color: red;
+    border: 1px solid red;
 }
