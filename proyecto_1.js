@@ -1,4 +1,4 @@
-/* --Declaramos el array para acumular los nombres */
+/* --Declaramos el array para acumular los nombres y el contador */
 let names = [];
 let count = 0;
 /*------ Funcion addName ------*/
@@ -11,7 +11,15 @@ function addName(event) {
         document.getElementById("name").focus();
     } else if ((event.type == "click") || (event.keyCode === 13)) {
         if (names.includes(name)) {
-            alert("Upps, parece que ese nombre ya está en la lista, introduce otro nombre"); 
+            let alertContainer = document.getElementById('alertMessage');
+            let alert = document.createElement('p');
+            alert.innerHTML = "Upps, parece que ese nombre ya está en la lista, introduce otro nombre";
+            alert.id = "alertP";
+            alertContainer.appendChild(alert);  
+            /* alert("Upps, parece que ese nombre ya está en la lista, introduce otro nombre");   */
+            setTimeout(() => {
+                alertContainer.removeChild(alert);
+            }, 1500); 
         }
         else {
             names.push(name);
@@ -19,7 +27,6 @@ function addName(event) {
             document.getElementById('counter').value = count;
             let textarea = document.getElementById("people");
             textarea.value = names.join("\n");
-            console.log(names);
             document.getElementById("name").value = "";
             document.getElementById("name").focus();
         }
@@ -27,7 +34,7 @@ function addName(event) {
     }
 }
 
-/*------ Función delete ------*/
+/*------ Función delete all------*/
 function deleteName() {
     names = [];
     count = 0;
@@ -50,45 +57,36 @@ function deleteMember() {
 let newTeam = [];
 function createTeams() {
     let numberOfTeams = parseInt(document.getElementById("teamSize").value); // cogemos el valor de los equipos
-    /* let count = names.length */
     if (numberOfTeams < 2 || numberOfTeams > (count/2)) {
-        alert("Introduce un valor entre 2 y "+ parseInt(count/2)); //falta el contador
+        alert("Introduce un valor entre 2 y "+ parseInt(count/2)); 
     } else {
         while (names.length > 0) {
-            /* for (let i = 0; i < names.length; i++) { */
-                let random = Math.floor(Math.random()*(names.length-1)); // formula aleatoria             
-                let selection = names[random]; // lo selecciona un nombre del array names [posicion random]
-                newTeam.push([selection]) // vamos a meter la posicion i y el nombre random 
-                //console.log(newTeam);
-                names.splice(random, 1); // borra el que hemos metido
-            /* } */
+            let random = Math.floor(Math.random()*(names.length-1)); // formula aleatoria             
+            let selection = names[random]; // lo selecciona un nombre del array names [posicion random]
+            newTeam.push([selection])  
+            names.splice(random, 1); // borra el que hemos metido
         }
         //console.log(newTeam) comprobamos que se meten en el array  
             
         for (let i = 0; i < numberOfTeams; i++) {
             let container = document.getElementById("teams");
-
             //Creamos div 
             let div = document.createElement("div");
-            div.id = "newDiv";
             div.classList = "new-div";
             container.appendChild(div);
 
             //Creamos h3 (titulos de los equipos)
             let titleTeam = document.createElement("h3");
-            titleTeam.id = "newTitle";
             titleTeam.classList = "new-title";
             titleTeam.innerHTML = `GRUPO ${i + 1}`;
             div.appendChild(titleTeam);
 
             //Creamos p de cada nombre
             for (let j = i; j < newTeam.length; j += numberOfTeams) {
-                    let individual = document.createElement("p");
-                    individual.id = "newIndividual"
-                    individual.classList = "new-individual"
-                    individual.innerHTML = newTeam[j]; //si no ponemos el 1 nos dice el valor
-                    div.appendChild(individual);
-               
+                let individual = document.createElement("p");
+                individual.classList = "new-individual"
+                individual.innerHTML = newTeam[j]; 
+                div.appendChild(individual);
             }
         }
     }
@@ -97,11 +95,9 @@ console.log(createTeams())
 /*------ Función reset ------*/
 function reset() {
     let container = document.getElementById("teams");
-    //console.log(container)
     while (container.firstChild) {
         container.removeChild(container.firstChild);
     }
-    names = newTeam;
+    names = newTeam;//reinicializamos el array con los nombres para poder volver a generar sin volver a introducir los nombres
     newTeam = [];
-    //console.log(newTeam)
 }
