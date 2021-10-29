@@ -15,39 +15,52 @@
 <body>
     <div class="title">
         <h1>Generador de equipos<span id="aleatory"><br>aleatorios</span></h1>
-        
+        <p>¿Tienes alguna duda? Mira las <a href="#popup">Instrucciones</a></p>
+        <div id="popup" class="overlay">
+            <div id="popupBody">
+                <h2>Título de la ventana</h2>
+                <a id="cerrar" href="#">&times;</a>
+                <div class="popupContent">
+                    <ul>
+                        <li>Debes escribir un nombre, no puedes repetirlo</li>
+                        <li>El botón <b>BORRAR</b> quita el último nombre añadido</li>
+                        <li>El botón <b>BORRAR TODOS</b> elimina todos los nombres añadidos.</li>
+                        <li>Cuando tengas todos los nombres añadidos, elige el número de equipos que desees generar</li>
+                        <li>El botón <b>GENERAR</b> desplegará los equipos aleatorios en la parte de abajo.</li>
+                        <li>El botón <b>RESET</b> autmáticamente resetea los equipos generados</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
+    <div id="alertMessage"></div>
     <div class="generator">
         <div class="section-generator">
-            <div class="row-create">
+            <div class="row-create"> <!--  linea de introducir nombres-->
                     <label class="legend">Introduce un nombre</label>
                     <input type="text" id="name" placeholder="Nombre" onkeyup="addName(event)">
-                    <input class="buttons" type="button" value="ADD" onclick="addName(event)">
-                    <input class="buttons" type="button" value="DELETE" onclick="deleteMember()">   
+                    <input class="buttons" type="button" value="AÑADIR" onclick="addName(event)">
+                    <input class="buttons" type="button" value="BORRAR" onclick="deleteMember()">   
             </div>
-            <div class="row-create_small">
+            <div class="row-create_small"><!--  linea que muestra el total de participantes-->
                 <label class="legend">Nº de participantes</label>
                 <input disabled type="number" id="counter" value="0">
-                <input class="buttons" type="button" value="DELETE ALL PARTICIPANTS" onclick="deleteName()">
+                <input class="buttons" type="button" value="BORRAR TODOS" onclick="deleteName()">
 
             </div>
-            <div class="row-create">
+            <div class="row-create"><!--  linea para elegir equipos-->
                 <label class="legend">¿Cuántos equipos quieres?</label>
-                <input type="number" value="2"  id="teamSize">
-                <input class="buttons" type="button" value="GENERATE" onclick="createTeams()">
+                <input type="number" value=2  id="teamSize">
+                <input class="buttons" type="button" value="GENERAR" onclick="createTeams()">
                 <input class="buttons" type="button" value="RESET" onclick="reset()">
             </div>
         </div>
-        <div class="section-generator">
+        <div class="section-generator"><!--  cuadro que va mostrando los participantes-->
             <textarea disabled id="people">
             </textarea>
         </div>
     </div> 
-    <div class="teams" id="teams">
-<!--         <div class="n-team">
-            <h3></h3>
-            <p></p>
-        </div> -->
+    <div class="teams" id="teams"><!--  div donde se muestran los equipos-->
     </div>
 </body>
 </html>
