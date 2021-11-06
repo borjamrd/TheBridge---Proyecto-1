@@ -43,7 +43,9 @@ function deleteName() {
     let name = document.getElementById("name");
     textarea.value = "";
     name.value = "";
-}
+    newTeam = [];
+    reset();
+ }
 
 /*------ Function delete -----*/
 function deleteMember() {
@@ -91,13 +93,12 @@ function createTeams() {
         }
     }
 }
-console.log(createTeams())
 /*------ Función reset ------*/
 function reset() {
     let container = document.getElementById("teams");
     while (container.firstChild) {
         container.removeChild(container.firstChild);
     }
-    names = newTeam;//reinicializamos el array con los nombres para poder volver a generar sin volver a introducir los nombres
+    newTeam.length > 0 ? names = newTeam : names = [];//reinicializamos el array con los nombres para poder volver a generar sin volver a introducir los nombres
     newTeam = [];
 }
